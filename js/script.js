@@ -1,3 +1,6 @@
+// tahun di footer
+document.getElementById('year').innerHTML = new Date().getFullYear();
+
 // event pada saat link di klik
 $('.page-scroll').on('click', function (e) {
 
@@ -41,7 +44,7 @@ $(window).scroll(function () {
     });
 
     // portfolio
-    if (wScroll > $('.portfolio').offset().top - -400) {
+    if (wScroll > $('.portfolio').offset().top - -350) {
         $('.portfolio .card').each(function (i) {
             setTimeout(function () {
                 $('.portfolio .card').eq(i).addClass('show');
