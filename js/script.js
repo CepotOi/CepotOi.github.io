@@ -49,4 +49,14 @@ $(window).scroll(function () {
         });
 
     }
+
+    // contact
+    if (wScroll > $('.portfolio').offset().top - -800) {
+        $('.contact i').each(function (i) {
+            setTimeout(function () {
+                $('.contact i').eq(i).addClass('show');
+            }, 300 * (i + 1));
+        });
+
+    }
 });
