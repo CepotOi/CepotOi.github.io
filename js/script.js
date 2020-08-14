@@ -41,7 +41,7 @@ $(window).scroll(function () {
     });
 
     // portfolio
-    if (wScroll > $('.portfolio').offset().top - -200) {
+    if (wScroll > $('.portfolio').offset().top - -400) {
         $('.portfolio .card').each(function (i) {
             setTimeout(function () {
                 $('.portfolio .card').eq(i).addClass('show');
@@ -51,7 +51,7 @@ $(window).scroll(function () {
     }
 
     // contact
-    if (wScroll > $('.portfolio').offset().top - -800) {
+    if (wScroll > $('.portfolio').offset().top - -1000) {
         $('.contact i').each(function (i) {
             setTimeout(function () {
                 $('.contact i').eq(i).addClass('show');
