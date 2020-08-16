@@ -11,7 +11,7 @@ $('.page-scroll').on('click', function (e) {
 
     // pindahan scroll
     $('html, body').animate({
-        scrollTop: elhref.offset().top - 163
+        scrollTop: elhref.offset().top - 89
     }, 1100, 'easeInOutExpo');
 
     e.preventDefault();
@@ -21,7 +21,7 @@ $('.page-scroll').on('click', function (e) {
 // parallax
 
 // about
-$(window).on('load', function () {
+$(window).on('scroll', function () {
     $('.pLeft').addClass('pShow');
     $('.pRight').addClass('pShow');
 });
@@ -43,6 +43,21 @@ $(window).scroll(function () {
         'transform': 'translate(0px,' + wScroll / 1.2 + '%)'
     });
 
+    // education
+    if (wScroll > $('.education').offset().top - ($(window).height() / 1.5)) {
+        $('.education p').each(function (i) {
+            setTimeout(function () {
+                $('.education p').eq(i).addClass('show');
+            }, 300 * (i + 1));
+        });
+    }
+
+    // skill
+    if (wScroll > $('.skill').offset().top - 500) {
+        $('.b1').addClass('bShow');
+        $('.b2').addClass('bShow');
+    }
+
     // portfolio
     if (wScroll > $('.portfolio').offset().top - -350) {
         $('.portfolio .card').each(function (i) {
@@ -50,16 +65,14 @@ $(window).scroll(function () {
                 $('.portfolio .card').eq(i).addClass('show');
             }, 300 * (i + 1));
         });
-
     }
 
     // contact
-    if (wScroll > $('.portfolio').offset().top - -1000) {
+    if (wScroll > $('.contact').offset().top - 500) {
         $('.contact i').each(function (i) {
             setTimeout(function () {
                 $('.contact i').eq(i).addClass('show');
             }, 300 * (i + 1));
         });
-
     }
 });

@@ -12,6 +12,7 @@ body {
     background-position: -220px 0px;
     color: #eaeaea;
     overflow: hidden;
+    background-repeat: no-repeat;
 }
 .jumbotron h1,
 .jumbotron p {
@@ -23,10 +24,37 @@ hr {
 }
 .contact,
 .about {
-    min-height: 400px;
+    min-height: 300px;
 }
 section {
     min-height: 600px;
+}
+.education {
+    background-color: #e9ecef;
+    min-height: 300px;
+}
+.education p {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 0.5s;
+}
+.education p.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.b1,
+.b2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+.b2 {
+    transform: translate(50px, 0);
+}
+.b1.bShow,
+.b2.bShow {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 .pLeft,
 .pRight {
@@ -49,10 +77,32 @@ section {
     opacity: 0;
     transform: translate(0, -40px);
     transition: 0.5s;
+    overflow: hidden;
 }
 .portfolio .card.show {
     opacity: 1;
     transform: translate(0, 0);
+}
+.card img {
+    display: block;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+.card:hover figcaption {
+    left: 0%;
+}
+.card:hover img {
+    transform: scale(1.05);
+}
+figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: -100%;
+    background-color: black;
+    color: white;
+    padding: 2px 8px;
+    font-size: 11px;
+    transition: all 0.3s ease-in-out;
 }
 .contact i {
     opacity: 0;
