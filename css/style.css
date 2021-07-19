@@ -9,7 +9,7 @@ body {
     background-image: url("../img/header-bg.jpg");
     background-attachment: fixed;
     background-size: cover;
-    background-position: -220px 0px;
+    /* background-position: -220px 0px; */
     color: #eaeaea;
     overflow: hidden;
     background-repeat: no-repeat;
